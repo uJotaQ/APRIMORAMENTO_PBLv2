@@ -1,0 +1,233 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'dFlipFlop:comb_5|q'
+Slack : -1.194
+TNS   : -1.194
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F11|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F13|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F6|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F1|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F3|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F15|q'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F2|q'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F14|q'
+Slack : 0.825
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F4|q'
+Slack : 0.825
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F9|q'
+Slack : 0.827
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F0|q'
+Slack : 0.833
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F7|q'
+Slack : 0.842
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F8|q'
+Slack : 0.842
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F10|q'
+Slack : 1.005
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F12|q'
+Slack : 1.208
+TNS   : 0.000
+
+Type  : Setup 'dFlipFlop:comb_4|q'
+Slack : 1.211
+TNS   : 0.000
+
+Type  : Setup 'delay:comb_3|dFlipFlop:F5|q'
+Slack : 1.287
+TNS   : 0.000
+
+Type  : Setup 'CLK'
+Slack : 1.924
+TNS   : 0.000
+
+Type  : Hold 'CLK'
+Slack : -1.978
+TNS   : -1.978
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F5|q'
+Slack : -1.341
+TNS   : -1.341
+
+Type  : Hold 'dFlipFlop:comb_4|q'
+Slack : -1.265
+TNS   : -1.265
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F12|q'
+Slack : -1.262
+TNS   : -1.262
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F10|q'
+Slack : -1.059
+TNS   : -1.059
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F7|q'
+Slack : -0.896
+TNS   : -0.896
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F8|q'
+Slack : -0.896
+TNS   : -0.896
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F0|q'
+Slack : -0.887
+TNS   : -0.887
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F9|q'
+Slack : -0.881
+TNS   : -0.881
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F14|q'
+Slack : -0.879
+TNS   : -0.879
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F4|q'
+Slack : -0.879
+TNS   : -0.879
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F2|q'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F15|q'
+Slack : -0.522
+TNS   : -0.522
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F1|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F3|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F11|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F13|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'delay:comb_3|dFlipFlop:F6|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'dFlipFlop:comb_5|q'
+Slack : 1.640
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLK'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'dFlipFlop:comb_4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'dFlipFlop:comb_5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F0|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F10|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F11|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F12|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F13|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F14|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F15|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F1|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F2|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F3|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F6|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F7|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F8|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'delay:comb_3|dFlipFlop:F9|q'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,514 @@
+Analysis & Synthesis report for main
+Wed May 15 17:17:35 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "dFlipFlop:comb_6"
+ 10. Port Connectivity Checks: "dFlipFlop:comb_5"
+ 11. Port Connectivity Checks: "dFlipFlop:comb_4"
+ 12. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F15"
+ 13. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F14"
+ 14. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F13"
+ 15. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F12"
+ 16. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F11"
+ 17. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F10"
+ 18. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F9"
+ 19. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F8"
+ 20. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F7"
+ 21. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F6"
+ 22. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F5"
+ 23. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F4"
+ 24. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F3"
+ 25. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F2"
+ 26. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F1"
+ 27. Port Connectivity Checks: "delay:comb_3|dFlipFlop:F0"
+ 28. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed May 15 17:17:35 2024       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; main                                        ;
+; Top-level Entity Name       ; main                                        ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 25                                          ;
+; Total pins                  ; 13                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; main               ; main               ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v  ;         ;
+; FFD.v                            ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/APRIMORAMENTO_PBL-main/FFD.v   ;         ;
+; delay.v                          ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Total logic elements                        ; 25                 ;
+;     -- Combinational with no register       ; 6                  ;
+;     -- Register only                        ; 0                  ;
+;     -- Combinational with a register        ; 19                 ;
+;                                             ;                    ;
+; Logic element usage by number of LUT inputs ;                    ;
+;     -- 4 input functions                    ; 0                  ;
+;     -- 3 input functions                    ; 6                  ;
+;     -- 2 input functions                    ; 0                  ;
+;     -- 1 input functions                    ; 19                 ;
+;     -- 0 input functions                    ; 0                  ;
+;                                             ;                    ;
+; Logic elements by mode                      ;                    ;
+;     -- normal mode                          ; 25                 ;
+;     -- arithmetic mode                      ; 0                  ;
+;     -- qfbk mode                            ; 0                  ;
+;     -- register cascade mode                ; 0                  ;
+;     -- synchronous clear/load mode          ; 0                  ;
+;     -- asynchronous clear/load mode         ; 0                  ;
+;                                             ;                    ;
+; Total registers                             ; 19                 ;
+; I/O pins                                    ; 13                 ;
+; Maximum fan-out node                        ; dFlipFlop:comb_4|q ;
+; Maximum fan-out                             ; 8                  ;
+; Total fan-out                               ; 66                 ;
+; Average fan-out                             ; 1.74               ;
++---------------------------------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name              ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------+-------------+--------------+
+; |main                      ; 25 (6)      ; 19           ; 0          ; 13   ; 0            ; 6 (6)        ; 0 (0)             ; 19 (0)           ; 0 (0)           ; 0 (0)      ; |main                            ; main        ; work         ;
+;    |dFlipFlop:comb_4|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|dFlipFlop:comb_4           ; dFlipFlop   ; work         ;
+;    |dFlipFlop:comb_5|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|dFlipFlop:comb_5           ; dFlipFlop   ; work         ;
+;    |dFlipFlop:comb_6|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|dFlipFlop:comb_6           ; dFlipFlop   ; work         ;
+;    |delay:comb_3|          ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3               ; delay       ; work         ;
+;       |dFlipFlop:F0|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F0  ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F10|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F10 ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F11|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F11 ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F12|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F12 ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F13|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F13 ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F14|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F14 ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F15|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F15 ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F1|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F1  ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F2|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F2  ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F3|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F3  ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F4|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F4  ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F5|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F5  ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F6|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F6  ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F7|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F7  ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F8|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F8  ; dFlipFlop   ; work         ;
+;       |dFlipFlop:F9|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |main|delay:comb_3|dFlipFlop:F9  ; dFlipFlop   ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 19    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dFlipFlop:comb_6"                                                                                                                                                                     ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dFlipFlop:comb_5"                                                                                                                                                                     ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dFlipFlop:comb_4"                                                                                                                                                                     ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F15"                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F14"                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F13"                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F12"                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F11"                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F10"                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F9"                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F8"                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F7"                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F6"                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F5"                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F4"                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F3"                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F2"                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F1"                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:comb_3|dFlipFlop:F0"                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q        ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed May 15 17:17:29 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file main.v
+    Info (12023): Found entity 1: main File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FFD.v
+    Info (12023): Found entity 1: dFlipFlop File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/FFD.v Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(16): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 16
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(26): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 26
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(36): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 36
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(46): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 46
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(56): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 56
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(66): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 66
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(76): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 76
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(86): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 86
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(96): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 96
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(106): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 106
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(116): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 116
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(126): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 126
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(136): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 136
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(146): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 146
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(156): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 156
+Warning (10275): Verilog HDL Module Instantiation warning at delay.v(166): ignored dangling comma in List of Port Connections File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 166
+Info (12021): Found 1 design units, including 1 entities, in source file delay.v
+    Info (12023): Found entity 1: delay File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at main.v(8): created implicit net for "Q1_d" File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(8): instance has no name File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(10): instance has no name File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(12): instance has no name File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(14): instance has no name File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 14
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10034): Output port "L1" at main.v(4) has no driver File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 4
+Warning (10034): Output port "L7" at main.v(4) has no driver File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 4
+Info (12128): Elaborating entity "delay" for hierarchy "delay:comb_3" File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 8
+Info (12128): Elaborating entity "dFlipFlop" for hierarchy "delay:comb_3|dFlipFlop:F0" File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/delay.v Line: 16
+Warning (12241): 19 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "L1" is stuck at GND File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 4
+    Warning (13410): Pin "L7" is stuck at GND File: /home/aluno/Downloads/APRIMORAMENTO_PBL-main/main.v Line: 4
+Info (21057): Implemented 38 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 25 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 340 megabytes
+    Info: Processing ended: Wed May 15 17:17:35 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:11
+
+
