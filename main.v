@@ -60,7 +60,8 @@ module main(AS, GT, CLK, C1, C2, C3, C4, C5, L1, L2, L3, L4, L5, L6, L7);
 	and(O_S4, O4, NOT_AS, NOT_GT);
 	and(O_S5, O5, NOT_AS, NOT_GT);
 	and(O_S6, O6, NOT_AS, NOT_GT);
-	
+
+// Exibindo na matriz de leds
 	or(L2, A_S2, G_S2, O_S2);
 	or(L3, A_S3, G_S3, O_S3);
 	or(L4, A_S4, G_S4, O_S4);
